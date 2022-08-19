@@ -54,7 +54,7 @@ private String name;
 //为了能够在静态方法中，返回 gf 对象，需要将其修饰为 static
 //對象，通常是重量級的對象, 餓漢式可能造成創建了對象，但是沒有使用. private static GirlFriend gf = new GirlFriend("小红红");
 private GirlFriend(String name) {
-System.out.println("構造器被調用.");
+System.out.println("构造器被调用");
 this.name = name;
 }
 public static GirlFriend getInstance() {
