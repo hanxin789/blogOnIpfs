@@ -1,8 +1,8 @@
 ---
-title: 'maven依赖错误问题'
+title: '分布式项目中maven依赖错误问题'
 date: 2022-05-10 12:44:15
 tags:
-- 'Spring'
+- 'maven'
 - 'SpringBoot'
 categories:
 - 'java'
@@ -35,10 +35,10 @@ categories:
 
 ```xml
                  &ndash;&gt;-->
-            <!--                        <dependency>-->
-            <!--                            <groupId>mysql</groupId>-->
-            <!--                            <artifactId>mysql-connector-java</artifactId>-->
-            <!--                        </dependency>-->
+            <!--             <dependency>-->
+            <!--                <groupId>mysql</groupId>-->
+            <!--                <artifactId>mysql-connector-java</artifactId>-->
+            <!--             </dependency>-->
 
             <!--            <dependency>-->
             <!--                <groupId>org.projectlombok</groupId>-->
