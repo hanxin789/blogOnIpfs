@@ -8,11 +8,11 @@ categories:
 - 'java'
 ---
 
+<!-- more -->
+
 ::: warning 最近在做分布式项目的时候，遇到一些以前写单spring项目没有遇到过的maven依赖问题
 
 :::
-
-<!-- more -->
 
 ##### 因为是有很多springboot服务的 所以我当然在父项目中加上了parent
 
