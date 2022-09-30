@@ -6,7 +6,7 @@ module.exports = [
     {
         text: '一些想法', link: '/音乐社科与杂谈/', icon: 'reco-faq',
         items: [
-            { text: '音乐社科与杂谈', link: '/音乐社科与杂谈/day8-18' },
+            { text: '音乐社科与杂谈', link: '/音乐社科与杂谈/day9-1' },
         ]
     },
     {
@@ -16,14 +16,14 @@ module.exports = [
                 text: 'Java',
                 items: [
                     { text: 'JavaSE', link: '/技术文章/javase/day1-6' },
-                    { text: 'Java生态', link: '/技术文章/java生态相关/day7-4' },
+                    { text: 'Java生态', link: '/技术文章/java生态相关/day7-18' },
                 ]
             },
             {
-
                 text: '网络与服务器', link: '/技术文章/网络与服务器/day8-18'
-
-
+            },
+            {
+                text: '区块链相关', link: '/技术文章/区块链相关/day9-30'
             },
             {
                 text: '前端',

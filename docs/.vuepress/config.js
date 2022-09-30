@@ -14,7 +14,7 @@ module.exports = {
         ['link', { rel: 'icon', href: '/img/favicon.ico' }],
         //搜索关键字
         ['meta', { name: 'keywords', content: '杂谈,vuepress,自建博客,冯胖子' }],
-        ['meta', { name: 'description', content: '音乐、计算机技术、艺术鉴赏、社科杂谈、java' }],
+        ['meta', { name: 'description', content: '音乐、计算机技术、艺术鉴赏、社科杂谈、java、区块链' }],
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         //爬虫抓取
         ["meta", { name: "robots", content: "all" }],

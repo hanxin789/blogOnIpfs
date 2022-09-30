@@ -13,7 +13,8 @@ isShowComment: true
 :::
 -
 ::: tip 踩过的坑
-### javaSE 、 java后端生态 、 vue
+
+### javaSE 、 java后端生态 、 vue 、区块链技术
 :::
 -
 ::: tip 关于服务器搭建与网络方面
@@ -21,6 +22,7 @@ isShowComment: true
 :::
 -
 ::: tip 书籍以及网站推荐
+
 #### 技术类
 #### http://dunwu.github.io/javacore 很详细的java知识点
 #### youzack.com 英语听力网站
