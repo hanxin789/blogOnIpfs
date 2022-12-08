@@ -1,6 +1,6 @@
 ---
 title: 'ethernaut.openzeppelin合约安全闯关-1'
-date: 2022-11-30 18:44:15
+date: 2022-12-5 13:42:15
 tags:
 - '区块链技术'
 - '智能合约安全'
