@@ -23,7 +23,7 @@ https://ethernaut.openzeppelin.com/
 
 浏览器控制台 help()指令
 
-![help](G:\vue-press\hanxin-vuepress\docs\技术文章\区块链相关\assets\1670479273112.png)
+![help](./assets/1670479273112.png)
 
 :::
 
