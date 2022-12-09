@@ -24,7 +24,7 @@ https://ethernaut.openzeppelin.com/
 
 浏览器控制台 help()指令
 
-![help](.\assets\1670479273112.png)
+![help](./assets/1670479273112.png)
 
 :::
 
