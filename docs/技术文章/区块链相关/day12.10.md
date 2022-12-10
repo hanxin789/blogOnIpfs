@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-7'
+title: 'ethernaut.openzeppelin合约安全闯关-6'
 date: 2022-12-10 13:42:15
 tags:
 - '区块链技术'
