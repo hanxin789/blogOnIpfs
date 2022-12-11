@@ -38,11 +38,12 @@ contract Privacy {
 
 /*
 数据存储布局分析
+！存储插槽不根据类型分配,只根据变量所占空间分配
 
- bool public locked = true; -> bool类型第一个 = slot0
-  uint256 public ID = block.timestamp; -> uint256类型占32字节并且第二个 = slot1
+ bool public locked = true; -> slot1没有位置所以独占32字节 = slot0
+  uint256 public ID = block.timestamp; -> uint256占32字节 = slot1
   
-  根据紧凑存储原则 以下三个变量共享一个slot 
+  根据紧凑存储原则 以下三个相邻变量共享一个slot 
   uint8 private flattening = 10; -> 1字节 
   uint8 private denomination = 255; -> 1字节
   uint16 private awkwardness = uint16(block.timestamp); -> 2字节 
