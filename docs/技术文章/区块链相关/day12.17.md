@@ -40,7 +40,8 @@ contract Denial {
        /*
        要了解的是call这种底层调用方法是没有gas限制的,而其他的transfer或send的gas限制是2300
        此处并没有检查call调用后的返回值,所以一旦call目标合约receive方法中有大量消耗gas的操作
-       交易就会因为gas耗尽而结束.这样就导致了withdraw这个函数永远无法正常执行
+       交易就会因为gas耗尽而回退.
+       这样就导致了withdraw这个函数执行到了partner.call{value:amountToSend}("");之后永远无法正常往下执行
        */
         partner.call{value:amountToSend}("");
         payable(owner).transfer(amountToSend);
