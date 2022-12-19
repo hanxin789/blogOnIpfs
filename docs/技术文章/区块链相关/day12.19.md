@@ -6,9 +6,6 @@ tags:
 - '智能合约安全'
 categories:
 - '智能合约安全'
-
-
-
 ---
 
 <!-- more -->
@@ -35,7 +32,7 @@ contract Shop {
     Buyer _buyer = Buyer(msg.sender);
  /*
 根据第11关我们知道view/pure标识符就是限制函数不能够在不同的形参输入下改变结果(不能改变函数的状态),但是此处是并没有输入的。
- 那么如何绕过这个判断就成了一个脑筋急转弯的问题。
+那么如何绕过这个判断就成了一个脑筋急转弯的问题。
  我们需要找到一个flag能够使我们自己实现的price函数返回不同的结果. 显然这里的isSold就是最好的flag
  */
     if (_buyer.price() >= price && !isSold) {
