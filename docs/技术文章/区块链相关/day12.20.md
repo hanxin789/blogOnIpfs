@@ -102,11 +102,12 @@ contract PuzzleWallet {
                 selector := mload(add(_data, 32))
             }
             if (selector == this.deposit.selector) {
-                require(!depositCalled, "Deposit can only be called once");
-                // 防止用户重复存入token
-                depositCalled = true;
+              //注意一点 require判断是表达式结果为false的时候触发
+               require(!depositCalled, "Deposit can only be called once");
+              // 防止用户重复存入token
+               depositCalled = true;
             }
-            //call函数没防止回调,应该if(selector == this.multicall.selector){revert}
+       //call函数没防止回调,应该if(selector == this.multicall.selector){revert}
             (bool success, ) = address(this).delegatecall(data[i]);
             require(success, "Error while delegating call");
         }
