@@ -126,7 +126,7 @@ poc思路:
 ```
 
 #####  所以我们得出以下流程:
-1.PuzzleProxy.proposeNewAdmin() -> PuzzleWallet.addToWhitelist(you address)
+##### 1.PuzzleProxy.proposeNewAdmin() -> PuzzleWallet.addToWhitelist(you address)
 
 ##### 执行完1之后:
 
@@ -152,7 +152,7 @@ poc思路:
 
 ##### 所以就得到了 合约余额:0.002ETH user:0.003ETH.
 
-2. ##### PuzzleWallet.execute(you address ,合约所有余额) ->PuzzleWallet.setMaxBalance(uint256(you address))
+2. ##### PuzzleWallet.execute(you address ,合约所有余额) -> PuzzleWallet.setMaxBalance(uint256(you address))
 
   ##### 完成 :ok_hand:
 
