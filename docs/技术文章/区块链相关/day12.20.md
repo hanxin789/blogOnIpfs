@@ -102,6 +102,7 @@ contract PuzzleWallet {
                 selector := mload(add(_data, 32))
             }
             if (selector == this.deposit.selector) {
+            //注意一点 require判断是表达式结果为false的时候触发
                 require(!depositCalled, "Deposit can only be called once");
                 // 防止用户重复存入token
                 depositCalled = true;
