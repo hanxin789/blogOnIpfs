@@ -47,7 +47,7 @@ contract Forta is IForta {
   mapping(address => IDetectionBot) public usersDetectionBots;
   //bot计数map
   mapping(address => uint256) public botRaisedAlerts;
-//获取检测机器人合约实例
+//设置检测机器人合约地址,并与发送地址对应
   function setDetectionBot(address detectionBotAddress) external override {
       usersDetectionBots[msg.sender] = IDetectionBot(detectionBotAddress);
   }
@@ -201,7 +201,7 @@ contract doubleEntryHack {
 
 ```
 
-##### 实现forba机器人:
+##### 实现forta机器人:
 
 ```solidity
 function handleTransaction(address user, bytes calldata msgData) external;
@@ -217,7 +217,7 @@ forta.notify(player, msg.data);//传入参数
 0x44	32	 	 长度       msgData
 0x64	4		 函数选择器 delegateTransfer(address,uint256,address) 第二次入栈
 
------------------以上为使用forbaBot固定传入data内存数据分布-------------------------
+-----------------以上为使用fortaBot固定传入data内存数据分布-------------------------
 
 0x68	32		 to 传参    0x....
 0x88	32		 value 传参  uint256
@@ -226,7 +226,7 @@ forta.notify(player, msg.data);//传入参数
 */
 ```
 
-##### 实现代码:
+##### Bot实现代码:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -236,8 +236,6 @@ pragma solidity ^0.8.0;
 
 contract AlertBot is IDetectionBot {
     address private cryptoVault;
-    DoubleEntryPoint de = DoubleEntryPoint(0x2059a107Ec64587E1Bb8E6CA92Fa39d483633660);
-
     constructor(address _cryptoVault) public {
         cryptoVault = _cryptoVault;
     }
@@ -253,11 +251,22 @@ contract AlertBot is IDetectionBot {
             IForta(msg.sender).raiseAlert(user);
         }
     }
- //设定Bot到forba合约
-    function setBot() public {
-        de.forta().setDetectionBot(address(this));
-    }
+ 
 }
 
+```
+
+##### 设置机器人到合约:
+
+```js
+//获取forta合约地址
+const DET =  await ethers.getContractAt('DoubleEntryPoint','0x1A5a1fe1E27C63E55e7A2440Bbb59faF4399B697')
+(await DET.forta()).toString()
+'0xCbAD8D04183d5A61406fabd7b5DC97cAb451235D'
+//获取forta合约实例并设置Bot
+const forta =  await ethers.getContractAt('Forta','0xCbAD8D04183d5A61406fabd7b5DC97cAb451235D')
+await forta.setDetectionBot('0x89c3E99feDDe0B2C4F5db927019d03bA5A38755a')//Bot合约地址
+//check
+(await forta.usersDetectionBots('0x0e21d35681E679C33dD49731935FB81F1aee8C05')).toString()
 ```
 
