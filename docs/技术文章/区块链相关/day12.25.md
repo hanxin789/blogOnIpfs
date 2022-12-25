@@ -13,7 +13,7 @@ categories:
 
 <!-- more -->
 
-#### 第二十七关   DoubleEntryPoint 思路与POC
+#### 第二十七关  GoodSamaritan  思路与POC
 
 #### 目标: 将wallet合约在Coin合约中的余额全部清空
 
@@ -135,8 +135,9 @@ user -call->  requestDonation() <-> wallet.donate10(msg.sender) <->  coin.transf
 1.Coin合约的transfer方法会检测目标地址是否是合约,如果是合约就要求实现了notify函数
 2.GoodSamaritan合约的requestDonation()函数是判断是否有(NotEnoughBalance())自定义异常返回来判断
 是否调用wallet.transferRemainder(msg.sender)转账所有Coin
-
 如果恶意合约恶意实现notify函数使其永远返回(NotEnoughBalance())异常呢?
+
+通过异常判断不可取,因为你无法判断异常是从哪里抛出的
 */
 
 ```
