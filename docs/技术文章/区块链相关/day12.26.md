@@ -78,6 +78,24 @@ contract UnstoppableLender is ReentrancyGuard {
     }
 }
 /*
+slither机器分析结果:
+slither ./contracts/unstoppable --solc-remaps '@openzeppelin=node_modules/@openzeppelin @chainlink=node_modules/@chainlink' --exclude naming-convention,external-function,low-level-calls
+
+UnstoppableLender.depositTokens(uint256) (contracts/unstoppable/UnstoppableLender.sol#27-32)
+ignores return value by damnValuableToken.transferFrom(msg.sender,address(this),amount) (contracts/unstoppable/UnstoppableLender.sol#30)
+UnstoppableLender.flashLoan(uint256) (contracts/unstoppable/UnstoppableLender.sol#34-55) 
+ignores return value by damnValuableToken.transfer(msg.sender,borrowAmount) (contracts/unstoppable/UnstoppableLender.sol#43)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-transfer
+
+UnstoppableLender.flashLoan(uint256) (contracts/unstoppable/UnstoppableLender.sol#34-55) uses a dangerous strict equality:  
+Reentrancy in UnstoppableLender.depositTokens(uint256) (contracts/unstoppable/UnstoppableLender.sol#27-32):     
+        External calls:
+        - damnValuableToken.transferFrom(msg.sender,address(this),amount) (contracts/unstoppable/UnstoppableLender.sol#30)
+        State variables written after the call(s):        - poolBalance = poolBalance + amount (contracts/unstoppable/UnstoppableLender.sol#31)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+*/
+
+/*
 问题1:
 在执行闪电贷函数的情况下 poolBalance此变量没有与合约真正存款数量同步
 如果在执行闪电贷的过程中,此时合约poolBalance与合约真正拥有的token数量不一致,
