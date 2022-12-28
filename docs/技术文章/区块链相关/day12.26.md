@@ -96,12 +96,11 @@ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentra
 */
 
 /*
-问题1:
-在执行闪电贷函数的情况下 poolBalance此变量没有与合约真正存款数量同步
+POC:
+1:在执行闪电贷函数的情况下 poolBalance此变量没有与合约真正存款数量同步
 如果在执行闪电贷的过程中,此时合约poolBalance与合约真正拥有的token数量不一致,
 那么就会直接返回false/revert
-
-问题2:没有对实现receiveTokens函数的合约进行校验,如果是恶意合约肯定不会正常执行闪电贷流程
+2:没有对实现receiveTokens函数的合约进行校验,如果是恶意合约肯定不会正常执行闪电贷流程
 */
 ```
 
