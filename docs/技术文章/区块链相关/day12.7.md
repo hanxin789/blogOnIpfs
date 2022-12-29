@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-2'
+title: '链上生成随机数问题'
 date: 2022-12-7 16:42:15
 tags:
 - '区块链技术'

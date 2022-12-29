@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-10'
+title: '合约slot读取'
 date: 2022-12-11 20:42:15
 tags:
 - '区块链技术'

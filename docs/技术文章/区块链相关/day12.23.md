@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-20'
+title: 'FortaBot'
 date: 2022-12-23 14:42:15
 tags:
 - '区块链技术'

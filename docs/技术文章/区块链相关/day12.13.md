@@ -1,6 +1,6 @@
 ---
 
-title: 'ethernaut.openzeppelin合约安全闯关-12'
+title: '使用ERC20标准库不重写完全问题与delegateCall-2'
 date: 2022-12-13 14:42:15
 tags:
 - '区块链技术'

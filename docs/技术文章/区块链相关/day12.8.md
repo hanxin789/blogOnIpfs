@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-3'
+title: '使用tx.origin身份验证的问题'
 date: 2022-12-8 18:42:15
 tags:
 - '区块链技术'

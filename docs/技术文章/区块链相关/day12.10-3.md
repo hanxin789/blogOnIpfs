@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-8'
+title: '合约ddos-1'
 date: 2022-12-10 19:42:15
 tags:
 - '区块链技术'

@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-19'
+title: 'proxy-2'
 date: 2022-12-20 14:42:15
 tags:
 - '区块链技术'

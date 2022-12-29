@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-9'
+title: '函数标识符pure和view-1'
 date: 2022-12-11 19:42:15
 tags:
 - '区块链技术'

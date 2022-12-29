@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-6'
+title: '合约自毁'
 date: 2022-12-10 13:42:15
 tags:
 - '区块链技术'

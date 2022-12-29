@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-5'
+title: 'delegatecall-1'
 date: 2022-12-9 20:42:15
 tags:
 - '区块链技术'

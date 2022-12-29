@@ -137,7 +137,7 @@ user -call->  requestDonation() <-> wallet.donate10(msg.sender) <->  coin.transf
 是否调用wallet.transferRemainder(msg.sender)转账所有Coin
 如果恶意合约恶意实现notify函数使其永远返回(NotEnoughBalance())异常呢?
 
-通过异常判断不可取,因为你无法判断异常是从哪里抛出的
+不明的接口实现通过异常判断不可取,因为你无法判断异常是从哪里抛出的
 */
 
 ```

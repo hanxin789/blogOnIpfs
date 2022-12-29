@@ -1,5 +1,5 @@
 ---
-title: 'ethernaut.openzeppelin合约安全闯关-15'
+title: 'ddos-2'
 date: 2022-12-17 13:42:15
 tags:
 - '区块链技术'
